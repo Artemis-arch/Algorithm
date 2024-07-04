@@ -1,0 +1,25 @@
+# 描述
+
+题目：现在运营想要查看用户在某天刷题后第二天还会再来刷题的平均概率。请你取出相应数据。
+
+# 解答
+
+```mysql
+select avg(if(b.device_id is not null,1,0)) as avg_ret
+from 
+(select distinct device_id,date
+from question_practice_detail
+)a
+left join 
+(
+select distinct device_id,date_sub(date,interval 1 day) as date 
+from question_practice_detail
+)b
+on a.device_id = b.device_id and a.date = b.date
+```
+
+# 总结
+
+* distinct可以对多个字段使用，去重效果是针对满足多个字段都相同的行，只有某个字段相同则会被保留
+* on可以设定多个字段的条件，如果是外连接，外表不满足条件的行将被忽略
+* 日期时间增减函数，如```date_sub(date,interval 1 day)```，其中“date”是字段名
