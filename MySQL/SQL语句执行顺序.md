@@ -2,7 +2,7 @@
 
 FROM → ON → JOIN → WHERE → GROUP BY → HAVING → SELECT →DISTINCT → ORDER BY→ LIMIT
 
-！[image](https://img-blog.csdnimg.cn/20190909144440851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l3ODg4NjQ4NA==,size_16,color_FFFFFF,t_70)
+![image](https://img-blog.csdnimg.cn/20190909144440851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l3ODg4NjQ4NA==,size_16,color_FFFFFF,t_70)
 
 
 1 FROM 执行笛卡尔积
