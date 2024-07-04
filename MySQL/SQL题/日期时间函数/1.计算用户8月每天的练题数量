@@ -1,0 +1,18 @@
+# 描述
+题目：现在运营想要计算出2021年8月每天用户练习题目的数量，请取出相应数据。
+
+# 解答
+```mysql
+select
+    day(date) as day, count(*) as question_cnt
+from 
+    question_practice_detail
+where
+    month(date) = 8
+group by 
+    day(date);
+```
+
+# 总结
+
+对于调用date中的日期和时间的函数，如```month(date)```,可以把它当成是一个列的字段名，将date看成拥有多个列。```month(date)```返回的是一个引用
