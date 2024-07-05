@@ -791,6 +791,14 @@ GROUP BY
   year;
 ```
 
+| region | year | A_sales | B_sales | C_sales |  
+|--------|------|---------|---------|---------|  
+| East   | 2021 | 100     | 150     | 0       |  
+| West   | 2021 | 80      | 0       | 120     |  
+| East   | 2022 | 110     | 160     | 0       |  
+| West   | 2022 | 0       | 0       | 130     |
+
+
 ## 列转行（数据逆透视）
 
 ### 概念说明：
@@ -829,3 +837,12 @@ UNION ALL
 SELECT region, 'C' AS product_id, product_C_sales AS sales_amount  
 FROM sales_summary;
 ```
+
+| region | product_id | sales_amount |  
+|--------|------------|--------------|  
+| East   | A          | 210          |  
+| East   | B          | 310          |  
+| East   | C          | 0            |  
+| West   | A          | 80           |  
+| West   | B          | 0            |  
+| West   | C          | 250          |
